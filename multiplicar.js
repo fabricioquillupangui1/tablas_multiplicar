@@ -13,6 +13,6 @@ function generarTablas() {
         contenido += `<div class="fila">${numero} × ${i} = <span>${resultado}</span></div>`;
     }
     
-    // 5. Inyectamos el contenido generado dentro del contenedor
+    // Inyectar el contenido generado dentro del contenedor
     contenedor.innerHTML = contenido;
 }
