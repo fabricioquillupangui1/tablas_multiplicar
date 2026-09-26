@@ -1,6 +1,6 @@
 function generarTablas() {
    
-    let inputNumero = document.getElementById("numeroTabla").value;
+    let inputNumero = document.getElementById("tablaNumero").value;
     
     let numero = inputNumero === "" ? 5 : parseInt(inputNumero);
 
