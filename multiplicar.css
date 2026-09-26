@@ -1,0 +1,212 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* Fondo vibrante, alegre y colorido tipo infantil */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    color: #4a4a4a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+.header {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor para alinear la caja de texto y el botón */
+.controls-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Caja de texto estilo infantil */
+.input-numero {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border: 3px solid #ff9a9e;
+    border-radius: 50px;
+    outline: none;
+    width: 130px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.input-numero:focus {
+    border-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Botón estilo juguetón y animado */
+.btn-probar {
+    font-family: 'Fredoka One', cursive;
+    background-color: #ff5252;
+    color: #ffffff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #d93838, 0 10px 20px rgba(0,0,0,0.15);
+    transition: all 0.1s ease;
+}
+
+.btn-probar:hover {
+    background-color: #ff7676;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #d93838, 0 12px 22px rgba(0,0,0,0.2);
+}
+
+.btn-probar:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #d93838, 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Contenedor principal */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Tarjeta principal amigable */
+.card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    border: 5px solid #ffeb3b;
+}
+
+.card h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0px #ffeaa7;
+}
+
+/* Contenedor de la tabla */
+.tabla {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* Filas dinámicas de la tabla */
+.fila {
+    background-color: #f0f8ff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    border-left: 6px solid #4facfe;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fila:hover {
+    transform: scale(1.03);
+    background-color: #e3f2fd;
+}
+
+.fila span {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    color: #ff9800;
+}
+
+/* Pie de página personalizado */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 3px dashed #ff9a9e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer p {
+    font-weight: 700;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.logo-container {
+    margin-top: 0.3rem;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border: 2px solid #ff5252;
+}
+
+/* Responsive para pantallas chicas */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem 1rem;
+    }
+
+    .card h1 {
+        font-size: 1.6rem;
+    }
+
+    .fila {
+        font-size: 1.05rem;
+    }
+}
+
+/* Estilos para las instrucciones y textos intuitivos */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.label-instruccion {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #555;
+}
+
+.help-text {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
