@@ -36,6 +36,7 @@ body {
 
 /* Caja de texto estilo infantil */
 .input-numero {
+    background: #4facfe;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
